@@ -15,7 +15,8 @@ var sem_3=false;
 var sem_4=false;
 var sem_5=false;
 var sem_6=false;
-var	year='2014';
+var 2015_2018_sem_1=false;
+var year='2014';
 
 
 LoadBranchYear();
@@ -308,7 +309,7 @@ function MCA2015_2018_SEM_1(){
 	$("#data6").hide();
 	$("#2015_2018_sem1").show();
 	
-	            if(!sem_1){
+	            if(!2015_2018_sem_1){
 	           $(document).ready(function() {
 	               $('#dataTables_2015_2018_sem1').DataTable( {
 	                   data: MCA_2015_2018_Sem1,
