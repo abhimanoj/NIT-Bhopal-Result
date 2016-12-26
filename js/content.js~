@@ -47,7 +47,6 @@ function LoadBranchYear()
 	
 	}
 	$('#mca_year').html(BetchAccordingToYear);
-
 	LoadBranchSemester();
 
 }
