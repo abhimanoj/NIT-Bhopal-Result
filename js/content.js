@@ -15,7 +15,7 @@ var sem_3=false;
 var sem_4=false;
 var sem_5=false;
 var sem_6=false;
-var 2015_2018_sem_1=false;
+var sem_1_2015_2018=false;
 var year='2014';
 
 
@@ -309,7 +309,7 @@ function MCA2015_2018_SEM_1(){
 	$("#data6").hide();
 	$("#2015_2018_sem1").show();
 	
-	            if(!2015_2018_sem_1){
+	            if(!sem_1_2015_2018){
 	           $(document).ready(function() {
 	               $('#dataTables_2015_2018_sem1').DataTable( {
 	                   data: MCA_2015_2018_Sem1,
@@ -322,7 +322,7 @@ function MCA2015_2018_SEM_1(){
 	                   ]
 	               } );
 	           } )
-	           sem_1=true;
+	           sem_1_2015_2018=true;
 	            }
 }
 /*
