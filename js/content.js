@@ -15,6 +15,8 @@ var sem_3=false;
 var sem_4=false;
 var sem_5=false;
 var sem_6=false;
+var	year='2014';
+
 
 LoadBranchYear();
 LoadBranchSemesterSubject();
@@ -37,10 +39,11 @@ function LoadBranchYear()
 {
 	for (var i = 0; i < BatchStatus.length; i++) 
 	{
+		alert(BatchStatus[i].Batch)
 		if(i==1)
-			BetchAccordingToYear +=' <option value='+BatchStatus[i].Sem+' selected>'+BatchStatus[i].BatchYear+'</option>';
+			BetchAccordingToYear +=' <option value='+BatchStatus[i].Batch+' selected>'+BatchStatus[i].BatchYear+'</option>';
 		else
-			BetchAccordingToYear +=' <option value='+BatchStatus[i].Sem+'>'+BatchStatus[i].BatchYear+'</option>';
+			BetchAccordingToYear +=' <option value='+BatchStatus[i].Batch+'>'+BatchStatus[i].BatchYear+'</option>';
 	
 	}
 	$('#mca_year').html(BetchAccordingToYear);
@@ -52,9 +55,25 @@ function LoadBranchYear()
 function LoadBranchSemester()
 {
 	SemesterAccordingToBatch='';
-	
+	alert(this.value);
 	if(this.value!=undefined)
-		Semester=this.value;
+		{
+			if(this.value=='2013')
+			{
+				year='2013';
+				Semester=0;
+			}
+			if(this.value=='2014')
+			{
+				year='2014';
+				Semester=5;
+			}
+			if(this.value=='2015')
+			{
+				year='2015';
+				Semester=1;
+			}
+		}
 	if(Semester==0)
 		{
 		HideData();
@@ -79,7 +98,7 @@ function LoadBranchSemesterSubject()
 {	
 	
 	SubjectCodeWithNameShow='';
-	
+	alert(this.value);
 	if(this.value!=null)
 	{
 	selectedPosition=this.value;
@@ -97,13 +116,18 @@ function LoadBranchSemesterSubject()
 			}
 		}
 		$('#subject_code').html(SubjectCodeWithNameShow);
-		
-	
-		DataSelection_MCA2014_2017();
-		//Default();
-	
+		if(year=='2013')
+			{
+			//2013
+			}
+		else if(year=='2014')
+			DataSelection_MCA2014_2017();
+		else if(year=='2015')
+			DataSelection_MCA2015_2018
 	
 }
+
+
 function DataSelection_MCA2014_2017()
 {
 	 
@@ -135,10 +159,10 @@ function MCA2014_2017_SEM_1(){
 	               $('#dataTables-example1').DataTable( {
 	                   data: sem1,
 	                   columns: [
-								{ title: "Number" },
-								{ title: "StudentName" },
-								{ title: "SGPA" },
-								{ title: "Status" }
+	                             { title: "SCH NUMBER" },
+	             				{ title: "STUDENT NAME" },
+	             				{ title: "SGPA" },
+	             				{ title: "STATUS" }
 	                   ]
 	               } );
 	           } )
@@ -159,10 +183,10 @@ if(!sem_2){
         $('#dataTables-example2').DataTable( {
             data: sem2,
             columns: [
-                { title: "Number" },
-                { title: "StudentName" },
-                { title: "SGPA" },
-                { title: "Status" }
+                      { title: "SCH NUMBER" },
+      				{ title: "STUDENT NAME" },
+      				{ title: "SGPA" },
+      				{ title: "STATUS" }
             ]
         } );
     } )
@@ -183,10 +207,10 @@ if(!sem_3){
 	        $('#dataTables-example3').DataTable( {
 	            data: sem3,
 	            columns: [
-	                { title: "Number" },
-	                { title: "StudentName" },
-	                { title: "SGPA" },
-	                { title: "Status" }
+	                      { title: "SCH NUMBER" },
+	      				{ title: "STUDENT NAME" },
+	      				{ title: "SGPA" },
+	      				{ title: "STATUS" }
 	            ]
 	        } );
 	    } )
@@ -206,10 +230,10 @@ function MCA2014_2017_SEM_4(){
 	        $('#dataTables-example4').DataTable( {
 	            data: sem4,
 	            columns: [
-	                { title: "Number" },
-	                { title: "StudentName" },
-	                { title: "SGPA" },
-	                { title: "Status" }
+	                      { title: "SCH NUMBER" },
+	      				{ title: "STUDENT NAME" },
+	      				{ title: "SGPA" },
+	      				{ title: "STATUS" }
 	            ]
 	        } );
 	    } )
@@ -231,10 +255,10 @@ function MCA2014_2017_SEM_5(){
 	        $('#dataTables-example5').DataTable( {
 	            data: sem5,
 	            columns: [
-	                { title: "Number" },
-	                { title: "StudentName" },
-	                { title: "SGPA" },
-	                { title: "Status" }
+	                      { title: "SCH NUMBER" },
+	      				{ title: "STUDENT NAME" },
+	      				{ title: "SGPA" },
+	      				{ title: "STATUS" }
 	            ]
 	        } );
 	    } )
@@ -254,15 +278,50 @@ function MCA2014_2017_SEM_6(){
 	        $('#dataTables-example6').DataTable( {
 	            data: sem6,
 	            columns: [
-	                { title: "Number" },
-	                { title: "StudentName" },
-	                { title: "SGPA" },
-	                { title: "Status" }
+	            { title: "SCH NUMBER" },
+				{ title: "STUDENT NAME" },
+				{ title: "SGPA" },
+				{ title: "STATUS" }
 	            ]
 	        } );
 	    } )
 	    sem_6=true;
 	}
+}
+
+function DataSelection_MCA2015_2018()
+{
+	 
+	if(selectedPosition==1)
+		MCA2015_2018_SEM_1();
+	
+}
+
+
+function MCA2015_2018_SEM_1(){
+	$("#data1").hide();
+	$("#data2").hide();
+	$("#data3").hide();
+	$("#data4").hide();
+	$("#data5").hide();
+	$("#data6").hide();
+	$("#2015_2018_sem1").show();
+	
+	            if(!sem_1){
+	           $(document).ready(function() {
+	               $('#dataTables_2015_2018_sem1').DataTable( {
+	                   data: MCA_2015_2018_Sem1,
+	                   columns: [
+								{ title: "SCH NUMBER" },
+								{ title: "STUDENT NAME" },
+								{ title: "SGPA" },
+								{ title: "CGPA" },
+								{ title: "STATUS" }
+	                   ]
+	               } );
+	           } )
+	           sem_1=true;
+	            }
 }
 /*
 //Load Data On Result Table
@@ -326,6 +385,7 @@ function HideData(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#2015_2018_sem1").hide();
 	$("#subject_code").hide();
 	alert("Soory Data Not Found");
 	
@@ -338,6 +398,7 @@ function Default()
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#2015_2018_sem1").hide();
 }
 $(document).ready(function () {
 	

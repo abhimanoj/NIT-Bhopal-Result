@@ -1,7 +1,7 @@
 BatchStatus=[
-   {'BatchYear': 'MCA BATCH@2013-2016', 'Sem': '0'}, 
-   {'BatchYear': 'MCA BATCH@2014-2017', 'Sem': '5'}, 
-   {'BatchYear': 'MCA BATCH@2015-2018', 'Sem': '0'}
+   {'BatchYear': 'MCA BATCH@2013-2016', 'Batch': '2013'}, 
+   {'BatchYear': 'MCA BATCH@2014-2017', 'Batch': '2014'}, 
+   {'BatchYear': 'MCA BATCH@2015-2018', 'Batch': '2015'}
    ];
 
 BatchSemesterWithSubject=[
