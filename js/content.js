@@ -39,7 +39,7 @@ function LoadBranchYear()
 {
 	for (var i = 0; i < BatchStatus.length; i++) 
 	{
-		alert(BatchStatus[i].Batch)
+		
 		if(i==1)
 			BetchAccordingToYear +=' <option value='+BatchStatus[i].Batch+' selected>'+BatchStatus[i].BatchYear+'</option>';
 		else
@@ -55,7 +55,7 @@ function LoadBranchYear()
 function LoadBranchSemester()
 {
 	SemesterAccordingToBatch='';
-	alert(this.value);
+	
 	if(this.value!=undefined)
 		{
 			if(this.value=='2013')
@@ -98,7 +98,7 @@ function LoadBranchSemesterSubject()
 {	
 	
 	SubjectCodeWithNameShow='';
-	alert(this.value);
+	
 	if(this.value!=null)
 	{
 	selectedPosition=this.value;
