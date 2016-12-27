@@ -92,6 +92,7 @@ function LoadBranchSemester()
 				}
 			}
 	$('#mca_semester').html(SemesterAccordingToBatch);
+	LoadBranchSemesterSubject();
 }
 
 //Set SemesterSubject On Selection Menu
@@ -124,7 +125,7 @@ function LoadBranchSemesterSubject()
 		else if(year=='2014')
 			DataSelection_MCA2014_2017();
 		else if(year=='2015')
-			DataSelection_MCA2015_2018
+			DataSelection_MCA2015_2018();
 	
 }
 
@@ -153,6 +154,7 @@ function MCA2014_2017_SEM_1(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data1").show();
 	
 	            if(!sem_1){
@@ -177,6 +179,7 @@ function MCA2014_2017_SEM_2(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data2").show();
 	
 if(!sem_2){
@@ -201,6 +204,7 @@ function MCA2014_2017_SEM_3(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data3").show();
 
 if(!sem_3){
@@ -224,6 +228,7 @@ function MCA2014_2017_SEM_4(){
 	$("#data3").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data4").show();
 	
 	if(!sem_4){
@@ -249,6 +254,7 @@ function MCA2014_2017_SEM_5(){
 	$("#data3").hide();
 	$("#data4").hide();
 	$("#data6").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data5").show();
 	
 	if(!sem_5){ 
@@ -272,6 +278,7 @@ function MCA2014_2017_SEM_6(){
 	$("#data3").hide();
 	$("#data4").hide();
 	$("#data5").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#data6").show();
 	 
 	if(!sem_6){
@@ -306,11 +313,11 @@ function MCA2015_2018_SEM_1(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
-	$("#2015_2018_sem1").show();
+	$("#data_2015_2018_sem1").show();
 	
 	            if(!sem_1_2015_2018){
 	           $(document).ready(function() {
-	               $('#dataTables_2015_2018_sem1').DataTable( {
+	               $('#dataTables-example7').DataTable( {
 	                   data: MCA_2015_2018_Sem1,
 	                   columns: [
 								{ title: "SCH NUMBER" },
@@ -374,7 +381,8 @@ function ShowResult(result)
 */
 
 function ShowData(){
-	$("#data1").show();
+	$("#data_2015_2018_sem1").show();
+	//$("#data1").show();
 	$("#subject_code").show();
 	
 }
@@ -386,7 +394,7 @@ function HideData(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
-	$("#2015_2018_sem1").hide();
+	$("#data_2015_2018_sem1").hide();
 	$("#subject_code").hide();
 	alert("Soory Data Not Found");
 	
@@ -399,7 +407,7 @@ function Default()
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
-	$("#2015_2018_sem1").hide();
+	$("#data_2015_2018_sem1").hide();
 }
 $(document).ready(function () {
 	
