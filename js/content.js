@@ -1,10 +1,11 @@
 
 //Default State
+
 var result='';
 var Semester=5;
 var BetchAccordingToYear = '';
 var SemesterAccordingToBatch = '';
-var selectedPosition=1;
+var selectedPosition=4;
 var SubjectCodeWithNameShow ='Sorry Data Not Found';
 var tbody ='Sorry Data Not Found';
 var thead ='Sorry Data Not Found';
@@ -16,12 +17,12 @@ var sem_4=false;
 var sem_5=false;
 var sem_6=false;
 var sem_1_2015_2018=false;
+var sem_2_2015_2018=false;
 var	year='2014';
-
 
 LoadBranchYear();
 LoadBranchSemesterSubject();
-Default();
+
 /*
 thead='';
 tbody='';
@@ -40,7 +41,7 @@ function LoadBranchYear()
 {
 	for (var i = 0; i < BatchStatus.length; i++) 
 	{
-		if(i==1)
+		if(i==0)
 			BetchAccordingToYear +=' <option value='+BatchStatus[i].Batch+' selected>'+BatchStatus[i].BatchYear+'</option>';
 		else
 			BetchAccordingToYear +=' <option value='+BatchStatus[i].Batch+'>'+BatchStatus[i].BatchYear+'</option>';
@@ -48,6 +49,7 @@ function LoadBranchYear()
 	}
 	$('#mca_year').html(BetchAccordingToYear);
 	LoadBranchSemester();
+	Default();
 
 }
 
@@ -57,20 +59,24 @@ function LoadBranchSemester()
 	SemesterAccordingToBatch='';
 	if(this.value!=undefined)
 		{
-			if(this.value=='2013')
-			{
-				year='2013';
-				Semester=0;
-			}
 			if(this.value=='2014')
 			{
 				year='2014';
 				Semester=5;
+				selectedPosition=4;
+				
 			}
 			if(this.value=='2015')
 			{
 				year='2015';
-				Semester=1;
+				Semester=2;
+				selectedPosition=2;
+			}
+			if(this.value=='2016')
+			{
+				year='2016';
+				Semester=0;
+				selectedPosition=0;
 			}
 		}
 	if(Semester==0)
@@ -89,6 +95,7 @@ function LoadBranchSemester()
 				
 				}
 			}
+	
 	$('#mca_semester').html(SemesterAccordingToBatch);
 	LoadBranchSemesterSubject();
 }
@@ -115,14 +122,18 @@ function LoadBranchSemesterSubject()
 			}
 		}
 		$('#subject_code').html(SubjectCodeWithNameShow);
-		if(year=='2013')
+		
+		if(year=='2014')
 			{
-			//2013
-			}
-		else if(year=='2014')
 			DataSelection_MCA2014_2017();
-		else if(year=='2015')
-			DataSelection_MCA2015_2018();
+			}else if(year=='2015')
+				{
+				DataSelection_MCA2015_2018();
+				}
+				else if(year=='2016')
+					{
+					//2016
+					}
 	
 }
 
@@ -151,6 +162,8 @@ function MCA2014_2017_SEM_1(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#subject").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
 	$("#data1").show();
 	
@@ -176,6 +189,8 @@ function MCA2014_2017_SEM_2(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#subject").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
 	$("#data2").show();
 	
@@ -201,6 +216,8 @@ function MCA2014_2017_SEM_3(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#subject").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
 	$("#data3").show();
 
@@ -225,17 +242,27 @@ function MCA2014_2017_SEM_4(){
 	$("#data3").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
 	$("#data4").show();
-	
+	$("#subject").show();
 	if(!sem_4){
 	 $(document).ready(function() {
 	        $('#dataTables-example4').DataTable( {
 	            data: sem4,
 	            columns: [
-	                      { title: "SCH NUMBER" },
-	      				{ title: "STUDENT NAME" },
-	      				{ title: "SGPA" },
+                      	{ title: "SNO" },
+                      	{ title: "SCH NUMBER" },
+      					{ title: "STUDENT NAME" },
+      					{ title: "SGPA" },
+      					{ title: "CGPA" },
+      					{ title: "MCA621" },
+      					{ title: "MCA622" },
+	      				{ title: "MCA623" },
+	      				{ title: "MCA624" },
+	      				{ title: "MCA625" },
+	      				{ title: "MCA626" },
 	      				{ title: "STATUS" }
 	            ]
 	        } );
@@ -251,17 +278,28 @@ function MCA2014_2017_SEM_5(){
 	$("#data3").hide();
 	$("#data4").hide();
 	$("#data6").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
 	$("#data5").show();
+	$("#subject").show();
 	
 	if(!sem_5){ 
 	$(document).ready(function() {
 	        $('#dataTables-example5').DataTable( {
 	            data: sem5,
 	            columns: [
-	                      { title: "SCH NUMBER" },
-	      				{ title: "STUDENT NAME" },
-	      				{ title: "SGPA" },
+	                    { title: "SNO" },
+                      	{ title: "SCH NUMBER" },
+      					{ title: "STUDENT NAME" },
+      					{ title: "SGPA" },
+      					{ title: "CGPA" },
+      					{ title: "MCA711" },
+      					{ title: "MCA712" },
+	      				{ title: "MCA713" },
+	      				{ title: "MCA714" },
+	      				{ title: "MCA715" },
+	      				{ title: "MCA716" },
 	      				{ title: "STATUS" }
 	            ]
 	        } );
@@ -275,7 +313,9 @@ function MCA2014_2017_SEM_6(){
 	$("#data3").hide();
 	$("#data4").hide();
 	$("#data5").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
 	$("#data6").show();
 	 
 	if(!sem_6){
@@ -299,6 +339,8 @@ function DataSelection_MCA2015_2018()
 	 
 	if(selectedPosition==1)
 		MCA2015_2018_SEM_1();
+	else if(selectedPosition==2)
+		MCA2015_2018_SEM_2();
 	
 }
 
@@ -310,6 +352,9 @@ function MCA2015_2018_SEM_1(){
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
+	$("#subject").hide();
+	$("#data_2016_2019_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
 	$("#data_2015_2018_sem1").show();
 	
 	            if(!sem_1_2015_2018){
@@ -328,6 +373,86 @@ function MCA2015_2018_SEM_1(){
 	           sem_1_2015_2018=true;
 	            }
 }
+
+
+function MCA2015_2018_SEM_2(){
+
+	$("#data1").hide();
+	$("#data2").hide();
+	$("#data3").hide();
+	$("#data4").hide();
+	$("#data5").hide();
+	$("#data6").hide();
+	$("#subject").show();
+	$("#data_2016_2019_sem1").hide();
+	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").show();
+	
+	            if(!sem_2_2015_2018){	
+	           $(document).ready(function() {
+	               $('#dataTables-example8').DataTable( {
+	                   data: MCA_2015_2018_Sem2,
+	                   columns: [
+						{ title: "SNO" },
+                      	{ title: "SCH NUMBER" },
+      					{ title: "STUDENT NAME" },
+      					{ title: "SGPA" },
+      					{ title: "CGPA" },
+      					{ title: "MCA521" },
+      					{ title: "MCA522" },
+	      				{ title: "MCA523" },
+	      				{ title: "MCA524" },
+	      				{ title: "MCA525" },
+	      				{ title: "MCA526" },
+	      				{ title: "STATUS" }
+	                   ]
+	               } );
+	           } )
+	           sem_2_2015_2018=true;
+	            }
+}
+
+
+function DataSelection_MCA2016_2019()
+{
+	 
+	if(selectedPosition==1)
+		MCA2016_2019_SEM_1();
+	
+	
+}
+
+
+function MCA2016_2019_SEM_1(){
+	$("#data1").hide();
+	$("#data2").hide();
+	$("#data3").hide();
+	$("#data4").hide();
+	$("#data5").hide();
+	$("#data6").hide();
+	$("#subject").hide();
+	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
+	$("#data_2016_2019_sem1").show();
+	
+	            if(!sem_1_2016_2019){
+	           $(document).ready(function() {
+	               $('#dataTables-example8').DataTable( {
+	                   data: MCA_2015_2018_Sem1,
+	                   columns: [
+								{ title: "SCH NUMBER" },
+								{ title: "STUDENT NAME" },
+								{ title: "SGPA" },
+								{ title: "CGPA" },
+								{ title: "STATUS" }
+	                   ]
+	               } );
+	           } )
+	           sem_1_2016_2019=true;
+	            }
+}
+
+
 /*
 //Load Data On Result Table
 function ShowResult(result)
@@ -392,6 +517,8 @@ function HideData(){
 	$("#data5").hide();
 	$("#data6").hide();
 	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
+	$("#data_2016_2019_sem1").hide();
 	$("#subject_code").hide();
 	alert("Soory Data Not Found");
 	
@@ -399,15 +526,17 @@ function HideData(){
 function Default()
 {
 	$("#subject").hide();
+	$("#data1").hide();
 	$("#data2").hide();
 	$("#data3").hide();
 	$("#data4").hide();
 	$("#data5").hide();
 	$("#data6").hide();
 	$("#data_2015_2018_sem1").hide();
+	$("#data_2015_2018_sem2").hide();
+	$("#data_2016_2019_sem1").hide();
 }
 $(document).ready(function () {
-	
 	$("#mca_year").change(LoadBranchSemester);
 	$("#mca_semester").change(LoadBranchSemesterSubject);
 	

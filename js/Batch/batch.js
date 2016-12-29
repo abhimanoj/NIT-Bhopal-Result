@@ -1,7 +1,7 @@
 BatchStatus=[
-   {'BatchYear': 'MCA BATCH@2013-2016', 'Batch': '2013'}, 
    {'BatchYear': 'MCA BATCH@2014-2017', 'Batch': '2014'}, 
-   {'BatchYear': 'MCA BATCH@2015-2018', 'Batch': '2015'}
+   {'BatchYear': 'MCA BATCH@2015-2018', 'Batch': '2015'}, 
+   {'BatchYear': 'MCA BATCH@2016-2019', 'Batch': '2016'}
    ];
 
 BatchSemesterWithSubject=[
@@ -10,7 +10,7 @@ BatchSemesterWithSubject=[
   	{'sem': [{ 'SubName': 'MATHEMATICS-III',	'SubCode': 'MCA611'}, { 'SubName': 'UNIX & ITS INTERNALS',	'SubCode': 'MCA612'}, { 'SubName': 'WINDOWS PROGRAMMING & SCRIPTING LANGUAGE',	'SubCode': 'MCA613'}, { 'SubName': 'ANALYSIS & DESIGN OF ALGORITHMS',	'SubCode': 'MCA614'}, { 'SubName': 'DATA BASE MANAGEMENT SYSTEM',	'SubCode': 'MCA615'}, { 'SubName': 'PROJECT AND VIVA',	'SubCode': 'MCA616'}] },
   	{'sem': [{ 'SubName': 'COMPUTER ORIENTED OPTIMIZATION',	'SubCode': 'MCA621'}, { 'SubName': 'COMPUTER NETWORKS', 'SubCode': 'MCA622'}, { 'SubName': 'COMPILER DESIGN',	'SubCode': 'MCA623'}, { 'SubName': 'DISTRIBUTED SYSTEMS',	'SubCode': 'MCA624'}, { 'SubName': 'WEB BASED APPLICATIONS DEVELOPMENT',	'SubCode': 'MCA625'}, { 'SubName': 'MINOR PROJECT II',	'SubCode': 'MCA626'}] },
   	{'sem': [{ 'SubName': 'COMPUTER GRAPHICS',	'SubCode': 'MCA711'}, { 'SubName': 'INTELLIGENT SYSTEMS',	'SubCode': 'MCA712'}, { 'SubName': 'MOBILE APPLICATION DEVELOPMENT',	'SubCode': 'MCA713'}, { 'SubName': 'DATA WAREHOUSE & MINING',	'SubCode': 'MCA714'}, { 'SubName': 'NEXT GENERATION NETWORKS',	'SubCode': 'MCA715'}, { 'SubName': 'PROJECT AND VIVA',	'SubCode': 'MCA716'}] },
-  	{'sem': [{ 'SubName': '1',	'SubCode': '1'}, { 'SubName': '2',	'SubCode': '2'}, { 'SubName': '3',	'SubCode': '3'}, { 'SubName': '4',	'SubCode': '4'}, { 'SubName': '5',	'SubCode': '5'}, { 'SubName': '6',	'SubCode': '6'}] },
+  	{'sem': [{ 'SubName': '1',	'SubCode': '1'}, { 'SubName': '2',	'SubCode': '2'}, { 'SubName': '3',	'SubCode': '3'}, { 'SubName': '4',	'SubCode': '4'}, { 'SubName': '5',	'SubCode': '5'}, { 'SubName': '6',	'SubCode': '6'}] }
   	];
 
 TheadData=[
@@ -22,6 +22,7 @@ TheadData=[
      {'Header': 'STATUS' },
      {'Header': 'MORE DETAILS' }
      ];
+
 
 
 
