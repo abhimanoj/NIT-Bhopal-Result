@@ -18,6 +18,7 @@ var sem_5=false;
 var sem_6=false;
 var sem_1_2015_2018=false;
 var sem_2_2015_2018=false;
+var sem_1_2016_2019=false;
 var	year='2014';
 
 LoadBranchYear();
@@ -75,8 +76,8 @@ function LoadBranchSemester()
 			if(this.value=='2016')
 			{
 				year='2016';
-				Semester=0;
-				selectedPosition=0;
+				Semester=1;
+				selectedPosition=1;
 			}
 		}
 	if(Semester==0)
@@ -132,7 +133,7 @@ function LoadBranchSemesterSubject()
 				}
 				else if(year=='2016')
 					{
-					//2016
+					DataSelection_MCA2016_2019();
 					}
 	
 }
@@ -437,14 +438,21 @@ function MCA2016_2019_SEM_1(){
 	
 	            if(!sem_1_2016_2019){
 	           $(document).ready(function() {
-	               $('#dataTables-example8').DataTable( {
-	                   data: MCA_2015_2018_Sem1,
+	               $('#dataTables-example9').DataTable( {
+	                   data: MCA_2016_2019_Sem1,
 	                   columns: [
-								{ title: "SCH NUMBER" },
-								{ title: "STUDENT NAME" },
-								{ title: "SGPA" },
-								{ title: "CGPA" },
-								{ title: "STATUS" }
+	                         	{ title: "SNO" },
+	                          	{ title: "SCH NUMBER" },
+	          					{ title: "STUDENT NAME" },
+	          					{ title: "SGPA" },
+	          					{ title: "CGPA" },
+	          					{ title: "MCA511" },
+	          					{ title: "MCA512" },
+	    	      				{ title: "MCA513" },
+	    	      				{ title: "MCA514" },
+	    	      				{ title: "MCA515" },
+	    	      				{ title: "MCA516" },
+	    	      				{ title: "STATUS" }
 	                   ]
 	               } );
 	           } )

@@ -1,7 +1,7 @@
-//[ 'SNO', 'ScholarNo', 'Student Name',	'SGPA', 'CGPA', 'MCA521', 'MCA522', 'MCA523',  'MCA524',  'MCA525',  'MCA5026',  'Result'] 
+//[ 'SNO', 'ScholarNo', 'Student Name',	'SGPA', 'CGPA', 'MCA621', 'MCA622', 'MCA623',  'MCA624',  'MCA625',  'MCA626',  'Result'] 
 MCA_2015_2018_Sem2=[
-[ '1',	'152120001', 'PAWAN DUMKA', '7.82', '7.15', '7.15', '8.02', '7.77', '7.07', '7.39', '8.87', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
-[ '2',	'152120002', 'K C ASSAIN', '8.00', '7.73', '8.21', '8.35', '7.4', '9.15', '6.41', '8.53', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
+[ '1',	'152120001',	'PAWAN DUMKA',	'7.82',	'7.15',	'7.15',	'8.02',	'7.77',	'7.07',	'7.39',	'8.87',	"<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>"],
+[ '2',	'152120002', 'K C ASSAIN',	'8.00', '7.73', '8.21', '8.35', '7.4', '9.15', '6.41', '8.53', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '3',	'152120003', 'SUNEEL KUMAR', '5.40', '4.86', '4', '6.37', '5.06', '3.78', '5.76', '6.74', "<a class='btn btn-danger btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '4',	'152120004', 'AYUSHI RAJ', '8.44', '8.39', '7.36', '8.35', '8.51', '8.05', '8.26', '9.43', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '5',	'152120005', 'PAYAL SHARMA', '8.66', '8.66', '8.42', '9.23', '8.27', '8.66', '8.04', '9.21', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
@@ -87,5 +87,3 @@ MCA_2015_2018_Sem2=[
 [ '85',	'152120085', 'SWATI', '8.93', '8.57', '8.73', '9.12', '9.01', '9.51', '8.36', '8.87', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '86',	'152120086', 'MONIKA SAINEE', '8.08', '7.63', '6.63', '8.02', '8.39', '7.93', '8.26', '8.65', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '87',	'152120087', 'SONALI LIKHAR', '7.26', '6.95', '7.15', '6.81', '7.03', '7.2', '7.28', '7.86', "<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ]];
-
-

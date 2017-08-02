@@ -82,4 +82,3 @@ sem4=[
 [ '80',	'142120082', 'NEERAJ SRIVASTAV', 		'0.00', '0.00', '0.00',   '0.00',   '0.00', 	'0.00',   '0.00',    '0.00', 	"<a class='btn btn-danger btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '81',	'142120083', 'ROHIT SHARMA', 			'9.23', '9.08', '7.27',   '8.22',   '9.86', 	'9.56',   '10.00',   '10.00', 	"<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ],
 [ '82',	'142120084', 'ANKITA SHARMA', 			'7.78', '7.80', '7.5',    '8.48',   '5.55', 	'8.24',   '8.67',    '7.89', 	"<a class='btn btn-success btn-xs btn-circle' style='width: 10px;height: 12px;'>" ]];
-
